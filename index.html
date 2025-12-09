@@ -95,6 +95,43 @@ h3 {
   grid-column: 1 / -1;   /* forces element to span entire row */
   width: 100%;
 }
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* big chart + 2 small cards */
+  gap: 25px;
+  margin-top: 30px;
+  align-items: start;
+}
+
+.experience-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.experience-card h4 {
+  color: #800019;
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.exp-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: #800019;
+}
+
+.exp-label {
+  font-size: 14px;
+  margin-top: 6px;
+  opacity: 0.75;
+}
+
     
     iframe {
       width: 100%;
@@ -158,31 +195,53 @@ h3 {
 
   </div>
   
-<h2 class="full-width">Overall Experience of a Jeevika SHG Member</h2>
+<h2>Overall Experience of a Jeevika SHG Member</h2>
 
-<div class="chart-box full-width">
-  <h3>Have you ever taken a loan from your Jeevika Samooh?</h3>
+<div class="experience-grid">
 
-  <iframe title="" aria-label="Stacked Bars" 
-    id="datawrapper-chart-Hd8sK"
-    src="https://datawrapper.dwcdn.net/Hd8sK/1/" 
-    scrolling="no" frameborder="0"
-    style="width: 0; min-width: 100% !important; border: none;"
-    height="350" data-external="1"></iframe>
+  <!-- COLUMN 1 — STACKED BAR CHART -->
+  <div class="chart-box" style="min-height: 350px;">
+    <h3>Overall SHG Experience</h3>
 
-  <script type="text/javascript">
-    window.addEventListener("message",function(a){
-      if(void 0!==a.data["datawrapper-height"]){
-        var e=document.querySelectorAll("iframe");
-        for(var t in a.data["datawrapper-height"])
-        for(var r,i=0; r = e[i]; i++)
-        if(r.contentWindow===a.source){
-          r.style.height=a.data["datawrapper-height"][t]+"px";
+    <iframe title="" aria-label="Stacked Bars" id="datawrapper-chart-Hd8sK"
+      src="https://datawrapper.dwcdn.net/Hd8sK/1/" 
+      scrolling="no" frameborder="0"
+      style="width: 100%; border: none;"
+      height="320" data-external="1">
+    </iframe>
+
+    <script type="text/javascript">
+      window.addEventListener("message",function(a){
+        if(void 0!==a.data["datawrapper-height"]){
+          var e=document.querySelectorAll("iframe");
+          for(var t in a.data["datawrapper-height"])
+          for(var r,i=0; r=e[i]; i++)
+          if(r.contentWindow===a.source){
+            r.style.height=a.data["datawrapper-height"][t]+"px";
+          }
         }
-      }
-    });
-  </script>
+      });
+    </script>
+  </div>
+
+  <!-- COLUMN 2 — SCORECARD 1 -->
+  <div class="experience-card">
+    <h4>Jeevika Loans Taken</h4>
+    <div class="exp-value">2.40</div>
+    <div class="exp-label">Median: 2</div>
+    <div class="exp-label">Range: 1–99</div>
+  </div>
+
+  <!-- COLUMN 3 — SCORECARD 2 -->
+  <div class="experience-card">
+    <h4>Loan Tenure (Months)</h4>
+    <div class="exp-value">23.62</div>
+    <div class="exp-label">Median: 10</div>
+    <div class="exp-label">Range: 0–180</div>
+  </div>
+
 </div>
+
 
 
   </div>
