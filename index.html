@@ -136,7 +136,7 @@
 /* Row 2: Small pie chart + wider bar chart */
 .overall-row2 {
   display: grid;
-  grid-template-columns: 0.35fr 0.65fr; /* narrow + wide */
+  grid-template-columns: 0.32fr 0.68fr; /* narrow + wide */
   gap: 25px;
   margin-top: 35px;
 }
@@ -154,26 +154,6 @@
   margin-top: 35px;
 }
 
-/* Ensure no scrollbars appear */
-iframe {
-  width: 100% !important;
-  border: none;
-  overflow: hidden;
-}
-
-.two-col-row {
-  display: grid;
-  grid-template-columns: 0.35fr 0.65fr; /* pie narrower, bar chart wider */
-  gap: 25px;
-  align-items: stretch; /* <-- THIS forces equal height */
-  margin-top: 30px;
-}
-
-/* Make both chart cards expand equally */
-.two-col-row .chart-card {
-  display: flex;
-  flex-direction: column;
-}
     
   </style>
 </head>
