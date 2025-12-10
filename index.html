@@ -122,6 +122,45 @@
       width: 100%;
       border: none;
     }
+
+   /* OVERALL SECTION LAYOUT */
+
+/* Row 1: Three equal columns */
+.overall-row3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+/* Row 2: Small pie chart + wider bar chart */
+.overall-row2 {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr; /* narrow + wide */
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.small-chart iframe {
+  width: 100%;
+}
+
+.large-chart iframe {
+  width: 100%;
+}
+
+/* Row 3: Full width chart */
+.overall-full {
+  margin-top: 35px;
+}
+
+/* Ensure no scrollbars appear */
+iframe {
+  width: 100% !important;
+  border: none;
+  overflow: hidden;
+}
+    
   </style>
 </head>
 
@@ -180,7 +219,7 @@
     </div>
   </div>
 
-  <h2>Overall Experience of a Jeevika SHG Member</h2>
+  <h2>Experience of a Jeevika SHG Member</h2>
 
   <!-- EXPERIENCE KPIs -->
   <div class="experience-kpi-grid">
@@ -223,6 +262,45 @@
 
   </div>
 
+  <h2>Overall...</h2>
+
+<!-- ROW 1: THREE EQUAL HORIZONTAL BAR CHARTS -->
+<div class="overall-row3">
+  <div class="chart-card">
+    <h3> Find Jeevika at least Mostly Helpful </h3>
+    <iframe src="https://datawrapper.dwcdn.net/19928/3/" height="350"></iframe>
+  </div>
+
+  <div class="chart-card">
+    <h3>Are Satisfied with Loan Amount </h3>
+    <iframe src="https://datawrapper.dwcdn.net/aa1py/1/" height="350"></iframe>
+  </div>
+
+  <div class="chart-card">
+    <h3>Rate CM highly</h3>
+    <iframe src="https://datawrapper.dwcdn.net/9R3Xo/1/" height="350"></iframe>
+  </div>
+</div>
+
+<!-- ROW 2: PIE (SMALL) + HORIZONTAL BAR (LARGE) -->
+<div class="overall-row2">
+  <div class="chart-card small-chart">
+    <h3>See Jeevika as Easiest Loan Source</h3>
+    <iframe src="https://datawrapper.dwcdn.net/z46Vl/1/" height="350"></iframe>
+  </div>
+
+  <div class="chart-card large-chart">
+    <h3>57% State an Income Increase due to Jeevika, because:</h3>
+    <iframe src="https://datawrapper.dwcdn.net/0N2px/1/" height="350"></iframe>
+  </div>
+</div>
+
+<!-- ROW 3: FULL-WIDTH CHART -->
+<div class="chart-card overall-full">
+  <h3>Have a Good Relationship with their Leaders </h3>
+  <iframe src="https://datawrapper.dwcdn.net/P3cjo/2/" height="420"></iframe>
+</div>
+  
 </div>
 
 <!-- Datawrapper auto-resize -->
