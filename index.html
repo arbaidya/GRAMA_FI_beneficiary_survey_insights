@@ -164,35 +164,32 @@
   margin-top: 40px;
 }
 
-/* Row 2: 3 columns — Pie, Pie, Stats Card */
+/* Row 2: 3 columns (Pie + Stats Box + Bar Chart) */
 .however-row2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 25px;
   margin-top: 35px;
 }
 
+/* Stats box formatting */
+.stats-box p {
+  margin: 10px 0;
+}
+
 .stats-box {
   background: white;
-  padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 18px;
-  color: #333;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 16px;
+  color: #800019; /* <-- Maroon theme color */
   line-height: 1.5;
+  border: 1px solid #e0e0e0;
 }
 
-/* Force equal height for pie/bar charts in row 2 */
-.however-row2 iframe {
-  height: 350px !important;
-}
-
-/* Row 3: Full width */
-.however-row3 {
-  margin-top: 35px;
+.stats-box strong {
+  color: #800019; /* ensures bold text also stays maroon */
 }
 
     
@@ -362,32 +359,27 @@
 </div>
 
 
-<!-- ROW 2 → Pie + Pie + Stats Box -->
+<!-- ROW 2 → Pie + Stats Box + Vertical Bar Chart -->
 <div class="however-row2">
 
+  <!-- COLUMN 1 → Pie Chart -->
   <div class="chart-card">
     <h3>See CM didi holding high influence in Samooh</h3>
-    <iframe src="https://datawrapper.dwcdn.net/0m1Ud/1/></iframe>
+    <iframe src="https://datawrapper.dwcdn.net/0m1Ud/1/" height="300"></iframe>
   </div>
 
-  <div class="chart-card">
-    <h3>Mostly don't know who Bank Sakhi is </h3>
-    <iframe src="https://datawrapper.dwcdn.net/vLeIG/2/"></iframe>
-  </div>
-
-  <!-- STATS BOX -->
+  <!-- COLUMN 2 → Stats Box -->
   <div class="stats-box">
     <p><strong>84%</strong> of all respondents state that the Samooh leadership has <strong>never changed</strong>.</p>
     <p><strong>21 out of 44</strong> respondents state that leaders in their Samooh belong to the <strong>same jaati</strong>.</p>
   </div>
 
-</div>
+  <!-- COLUMN 3 → Vertical Bar Chart -->
+  <div class="chart-card">
+    <h3>Want the pre-determined savings amount to increase to...</h3>
+    <iframe src="https://datawrapper.dwcdn.net/eJW7g/1/" height="340"></iframe>
+  </div>
 
-
-<!-- ROW 3 → Full-width Vertical Bar Chart -->
-<div class="chart-card however-row3">
-  <h3>Want the pre-determined savings amount to increase to...</h3>
-  <iframe src="https://datawrapper.dwcdn.net/eJW7g/1/"></iframe>
 </div>
 
   
