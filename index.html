@@ -189,6 +189,21 @@
             gap: 25px;
             margin-top: 35px;
         }
+
+    .chart-selector {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 6px;
+}
+
+.chart-selector select {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
     </style>
 </head>
 
@@ -281,14 +296,43 @@
 
     <!-- TWO CHARTS -->
     <div class="two-chart-grid">
+        <!-- LOAN EVER TAKEN -->
         <div class="chart-card">
-            <h3>Have you ever taken a loan from your Jeevika Samooh?</h3>
-            <iframe src="https://datawrapper.dwcdn.net/Hd8sK/4/" height="400"></iframe>
-        </div>
+          <div class="chart-selector">
+        <select onchange="changeChart(this, 'helpful_jeevika_chart')">
+            <option value="https://datawrapper.dwcdn.net/Hd8sK/4/">Full sample</option>
+            <option value="https://datawrapper.dwcdn.net/iS76C/1/">Angika</option>
+        </select>
+    </div>
 
+    <h3>Have you ever taken a loan from your Jeevika Samooh?</h3>
+
+    <iframe
+        id="helpful_jeevika_chart"
+        src="https://datawrapper.dwcdn.net/Hd8sK/4/"
+        height="380">
+    </iframe>
+            
+        </div>  
+    <!-- LOAN USE -->
         <div class="chart-card">
-            <h3>How did you use the loan amount?</h3>
-            <iframe src="https://datawrapper.dwcdn.net/irQy6/7/" height="289"></iframe>
+            
+        <div class="chart-selector">
+        <select onchange="changeChart(this, 'helpful_jeevika_chart')">
+            <option value="https://datawrapper.dwcdn.net/irQy6/7/">Full sample</option>
+            <option value="https://datawrapper.dwcdn.net/t9K2a/1/">Angika</option>
+        </select>
+    </div>
+
+    <h3>How did you use the loan amount?</h3>
+
+    <iframe
+        id="helpful_jeevika_chart"
+        src="https://datawrapper.dwcdn.net/irQy6/7/"
+        height="380">
+    </iframe>
+
+        
         </div>
     </div>
 
@@ -397,6 +441,15 @@
             });
         }
     });
+</script>
+
+<script>
+function changeChart(selectEl, iframeId) {
+    const iframe = document.getElementById(iframeId);
+    if (!iframe) return;
+
+    iframe.src = selectEl.value;
+}
 </script>
 
 </body>
