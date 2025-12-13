@@ -565,8 +565,20 @@
 
     <div class="however-row2">
         <div class="chart-card">
-            <h3>Who has more influence in the Samooh?</h3>
-            <iframe src="https://datawrapper.dwcdn.net/0m1Ud/1/" height="300"></iframe>
+        <div class="chart-selector">
+        <select onchange="changeChart(this, 'shg_influence')">
+            <option value="https://datawrapper.dwcdn.net/0m1Ud/1/">Full sample</option>
+            <option value="https://datawrapper.dwcdn.net/0ITgE/1/">Angika</option>
+        </select>
+        </div>
+
+        <h3>Who has more influence in the Samooh?</h3>
+
+        <iframe
+        id="shg_influence"
+        src="https://datawrapper.dwcdn.net/0m1Ud/1/"
+        height="380">
+        </iframe>
         </div>
 
         <div class="stats-box">
@@ -577,8 +589,20 @@
         </div>
 
         <div class="chart-card">
-            <h3>Desired increase in weekly deposit</h3>
-            <iframe src="https://datawrapper.dwcdn.net/eJW7g/3/" height="340"></iframe>
+         <div class="chart-selector">
+        <select onchange="changeChart(this, 'weekly_deposit_inc')">
+            <option value="https://datawrapper.dwcdn.net/eJW7g/3/">Full sample</option>
+            <option value="https://datawrapper.dwcdn.net/cJ8Yg/1/">Angika</option>
+        </select>
+        </div>
+
+        <h3>Desired increase in weekly deposit</h3>
+
+        <iframe
+        id="weekly_deposit_inc"
+        src="https://datawrapper.dwcdn.net/0m1Ud/1/"
+        height="380">
+        </iframe>
         </div>
     </div>
 
@@ -587,13 +611,37 @@
 
     <div class="other-sources-row">
         <div class="chart-card">
-            <h3>Why choose bank over Jeevika?</h3>
-            <iframe src="https://datawrapper.dwcdn.net/A02aZ/4/" height="380"></iframe>
+         <div class="chart-selector">
+        <select onchange="changeChart(this, 'bank_why')">
+            <option value="https://datawrapper.dwcdn.net/A02aZ/4/">Full sample</option>
+            <option value="https://datawrapper.dwcdn.net/mOeUM/1/">Angika</option>
+        </select>
+        </div>
+
+        <h3>Why choose bank over Jeevika?</h3>
+
+        <iframe
+        id="bank_why"
+        src="https://datawrapper.dwcdn.net/A02aZ/4/"
+        height="380">
+        </iframe>
         </div>
 
         <div class="chart-card">
-            <h3>Why was this source easier?</h3>
-            <iframe src="https://datawrapper.dwcdn.net/dSZNf/5/" height="380"></iframe>
+          <div class="chart-selector">
+        <select onchange="changeChart(this, 'bank_why')">
+            <option value="https://datawrapper.dwcdn.net/dSZNf/5/">Full sample</option>
+            <option value="https://datawrapper.dwcdn.net/tswOq/1/">Angika</option>
+        </select>
+        </div>
+
+        <h3>Why was the other source easier?</h3>
+
+        <iframe
+        id="bank_why"
+        src="https://datawrapper.dwcdn.net/dSZNf/5/"
+        height="380">
+        </iframe>
         </div>
     </div>
 
