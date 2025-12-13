@@ -420,13 +420,37 @@
 
     <div class="overall-row2">
         <div class="chart-card">
+              <div class="chart-selector">
+                <select onchange="changeChart(this, 'loan_source_easy_which')">
+                    <option value="https://datawrapper.dwcdn.net/2waox/1/">Full sample</option>
+                    <option value="https://datawrapper.dwcdn.net/pgRZI/1/">Angika</option>
+                </select>
+            </div>
+
             <h3>From which source was the loan easier to get?</h3>
-            <iframe src="https://datawrapper.dwcdn.net/2waox/1/" height="300"></iframe>
+
+            <iframe
+                id="loan_source_easy_which"
+                src="https://datawrapper.dwcdn.net/2waox/1/"
+                height="380">
+            </iframe>
         </div>
 
         <div class="chart-card">
+              <div class="chart-selector">
+                <select onchange="changeChart(this, 'inc_increase_jeevika')">
+                    <option value="https://datawrapper.dwcdn.net/0N2px/4/">Full sample</option>
+                    <option value="https://datawrapper.dwcdn.net/S4Ero/1/">Angika</option>
+                </select>
+            </div>
+
             <h3>How has your income increased through Jeevika?</h3>
-            <iframe src="https://datawrapper.dwcdn.net/0N2px/4/" height="350"></iframe>
+
+            <iframe
+                id="inc_increase_jeevika"
+                src="https://datawrapper.dwcdn.net/0N2px/4/"
+                height="380">
+            </iframe>            
         </div>
     </div>
 
