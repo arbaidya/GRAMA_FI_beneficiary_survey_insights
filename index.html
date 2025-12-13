@@ -491,8 +491,20 @@
     </div>
 
     <div class="chart-card overall-full">
+        <div class="chart-selector">
+        <select onchange="changeChart(this, 'rel_leaders')">
+            <option value="https://datawrapper.dwcdn.net/P3cjo/2/">Full sample</option>
+            <option value="https://datawrapper.dwcdn.net/nmAU2/1/">Angika</option>
+        </select>
+        </div>
+
         <h3>Relationship with the Samooh leadership</h3>
-        <iframe src="https://datawrapper.dwcdn.net/P3cjo/2/" height="420"></iframe>
+
+        <iframe
+        id="rel_leaders"
+        src="https://datawrapper.dwcdn.net/P3cjo/2/"
+        height="380">
+        </iframe>
     </div>
 
     <!-- HOWEVER -->
