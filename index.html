@@ -269,27 +269,89 @@
 
   <!-- PIE CHART GRID -->
   <div class="chart-grid">
+   <!-- Income -->
     <div class="chart-card">
-      <h3>Income Level</h3>
-      <iframe src="https://datawrapper.dwcdn.net/1Dc9F/4/" style="width: 100%; border: none;" height="581"></iframe>
-    </div>
-    <div class="chart-card">
-      <h3>Education Level</h3>
-      <iframe src="https://datawrapper.dwcdn.net/f6O2L/2/" style="width: 100%; border: none;" height="533"></iframe>
-    </div>
-    <div class="chart-card">
-      <h3>Religion</h3>
-      <iframe src="https://datawrapper.dwcdn.net/3pQdT/3/" style="width: 100%; border: none;" height="493"></iframe>
-    </div>
-    <div class="chart-card">
-      <h3>Caste</h3>
-      <iframe src="https://datawrapper.dwcdn.net/Fm16H/3/" style="width: 100%; border: none;" height="533"></iframe>
-    </div>
-    <div class="chart-card">
-      <h3>Membership Status</h3>
-      <iframe src="https://datawrapper.dwcdn.net/DHMgq/3/" style="width: 100%; border: none;" height="493"></iframe>
-    </div>
+              <div class="chart-selector">
+    <select onchange="changeChart(this, 'incomesource')">
+      <option value="https://datawrapper.dwcdn.net/1Dc9F/4/">Full sample</option>
+      <option value="https://www.datawrapper.de/_/nok71/">Angika</option>
+    </select>
   </div>
+
+  <h3>Income Source </h3>
+
+  <iframe
+    id="incomesource"
+    src="https://www.datawrapper.de/_/DNQac/"
+    height="380"
+    style="width: 100%; border: none;">
+  </iframe>
+
+    </div>
+
+    <!-- Education -->
+    <div class="chart-card">
+         <div class="chart-selector">
+    <select onchange="changeChart(this, 'education')">
+      <option value="https://datawrapper.dwcdn.net/f6O2L/2/">Full sample</option>
+      <option value="https://www.datawrapper.de/_/nok71/">Angika</option>
+    </select>
+  </div>
+
+  <h3>Education Level</h3>
+
+  <iframe
+    id="education"
+    src="https://datawrapper.dwcdn.net/f6O2L/2/"
+    height="380"
+    style="width: 100%; border: none;">
+  </iframe>
+      
+    </div>
+
+    
+  <!-- Religion -->
+    <div class="chart-card">
+      <div class="chart-selector">
+        <select onchange="changeChart(this,'religion')">
+          <option value="https://datawrapper.dwcdn.net/3pQdT/3/">Full sample</option>
+          <option value="https://www.datawrapper.de/_/iYmFz/">Angika</option>
+        </select>
+      </div>
+      <h3>Religion</h3>
+      <iframe id="religion"
+              src="https://datawrapper.dwcdn.net/3pQdT/3/"
+              height="493"></iframe>
+    </div>
+
+    <!-- Caste -->
+    <div class="chart-card">
+      <div class="chart-selector">
+        <select onchange="changeChart(this,'caste')">
+          <option value="https://datawrapper.dwcdn.net/Fm16H/3/">Full sample</option>
+          <option value="https://www.datawrapper.de/_/jKhnV/">Angika</option>
+        </select>
+      </div>
+      <h3>Caste</h3>
+      <iframe id="caste"
+              src="https://datawrapper.dwcdn.net/Fm16H/3/"
+              height="533"></iframe>
+    </div>
+
+    <!-- Membership Status -->
+    <div class="chart-card">
+      <div class="chart-selector">
+        <select onchange="changeChart(this,'membership_status')">
+          <option value="https://datawrapper.dwcdn.net/DHMgq/3/">Full sample</option>
+          <option value="https://www.datawrapper.de/_/CjyLT/">Angika</option>
+        </select>
+      </div>
+      <h3>Membership Status</h3>
+      <iframe id="membership_status"
+              src="https://datawrapper.dwcdn.net/DHMgq/3/"
+              height="493"></iframe>
+    </div>
+
 
   <h2>Experience of a Jeevika SHG Member</h2>
 
@@ -344,6 +406,7 @@
 
 <!-- ROW 1: THREE EQUAL HORIZONTAL BAR CHARTS -->
 <div class="overall-row3">
+  <!-- Jeevika Helpful -->
   <div class="chart-card">
 
   <div class="chart-selector">
@@ -364,18 +427,33 @@
 
 </div>
 
-  <div class="chart-card">
-    <h3>Are you satisfied with the loan amount? </h3>
-    <!-- <iframe src="https://datawrapper.dwcdn.net/aa1py/1/" height="350"></iframe> -->
-    <iframe title="" aria-label="Column Chart" id="datawrapper-chart-aa1py" src="https://datawrapper.dwcdn.net/aa1py/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="399" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
-  </div>
+ <!-- Loan Satisfaction -->
+    <div class="chart-card">
+      <div class="chart-selector">
+        <select onchange="changeChart(this,'loan_satisfaction')">
+          <option value="https://datawrapper.dwcdn.net/aa1py/3/">Full sample</option>
+          <option value="https://datawrapper.dwcdn.net/9IHOa/1/">Angika</option>
+        </select>
+      </div>
+      <h3>Are you satisfied with the loan amount?</h3>
+      <iframe id="loan_satisfaction"
+              src="https://datawrapper.dwcdn.net/aa1py/3/"
+              height="399"></iframe>
+    </div>
 
-  <div class="chart-card">
-    <h3>How would you rate your CM didi?</h3>
-    <!-- <iframe src="https://datawrapper.dwcdn.net/9R3Xo/1/" height="350"></iframe> -->
-    <iframe title="" aria-label="Column Chart" id="datawrapper-chart-9R3Xo" src="https://datawrapper.dwcdn.net/9R3Xo/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="380" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
-  </div>
-</div>
+    <!-- CM Rating -->
+    <div class="chart-card">
+      <div class="chart-selector">
+        <select onchange="changeChart(this,'cm_rating')">
+          <option value="https://datawrapper.dwcdn.net/9R3Xo/3/">Full sample</option>
+          <option value="https://datawrapper.dwcdn.net/ZRj1v/1/">Angika</option>
+        </select>
+      </div>
+      <h3>How would you rate your CM didi?</h3>
+      <iframe id="cm_rating"
+              src="https://datawrapper.dwcdn.net/9R3Xo/3/"
+              height="380"></iframe>
+    </div>
 
 <!-- ROW 2: PIE (SMALL) + HORIZONTAL BAR (LARGE) -->
 <div class="overall-row2">
